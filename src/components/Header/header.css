@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 1rem;
+  padding-top: 1rem;
+  height: 10.5rem;
+}
+@media (min-width: 48rem) {
+  .header {
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0 1.25rem;
+    padding-top: 0.625rem;
+    height: 5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .header {
+    margin: 0 8rem;
+  }
+}
+.header__logo {
+  text-align: center;
+  width: 75%;
+}
+@media (min-width: 48rem) {
+  .header__logo {
+    text-align: start;
+    margin: 0 2rem 0 1.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .header__logo {
+    margin-right: 15rem;
+  }
+}
+.header__logo-icon {
+  height: 1.875rem;
+  margin-bottom: 0.5rem;
+}
+.header__form {
+  flex-grow: 1;
+}
+.header__search {
+  font-family: "Avenir Demi";
+  width: 95%;
+  height: 3.125rem;
+  background: url(../../assets/icons/search.svg) no-repeat 0.44rem 0.938rem;
+  background-color: #FAFAFA;
+  padding-left: 2.188rem;
+  border: 0.063rem solid #E1E1E1;
+  border-radius: 5px;
+}
+@media (min-width: 48rem) {
+  .header__search {
+    width: 30vw;
+    font-size: 1rem;
+    margin: 0 0.8rem 0 1rem;
+    background: url(../../assets/icons/search.svg) no-repeat 0.5rem 0.8rem;
+    background-size: 1.5rem;
+    padding-left: 3rem;
+    background-position: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .header__search {
+    width: 20rem;
+    font-size: 1rem;
+  }
+}
+.header__avatar {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center left;
+     object-position: center left;
+}
+@media (min-width: 48rem) {
+  .header__avatar {
+    width: 3.35rem;
+    height: 3.35rem;
+    order: 2;
+  }
+}
+@media (min-width: 80rem) {
+  .header__avatar {
+    margin-left: 0.6rem;
+  }
+}
+.header__button {
+  font-family: "Avenir Demi";
+  background: url(../../assets/icons/upload.svg) no-repeat 0.5rem 0.7rem;
+  background-color: #0095FF;
+  border: none;
+  border-radius: 0.313rem;
+  color: #FFFFFF;
+  height: 3rem;
+  cursor: pointer;
+  width: 100%;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+@media (min-width: 48rem) {
+  .header__button {
+    width: 30rem;
+    margin-right: 0.8rem;
+    order: 1;
+  }
+}
+@media (min-width: 80rem) {
+  .header__button {
+    width: 45rem;
+    margin: 0 1rem;
+    order: 1;
+    padding: 0 1.2rem;
+  }
+}/*# sourceMappingURL=header.css.map */
