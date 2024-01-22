@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.nextVideos {
+  font-family: "Avenir Demi";
+  font-size: 1.1rem;
+  line-height: 1.125rem;
+  margin: 1.25rem 1rem;
+}
+.nextVideos__title {
+  color: #AFAFAF;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+@media (min-width: 80rem) {
+  .nextVideos__title {
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .nextVideos {
+    float: right;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 5rem;
+  }
+}/*# sourceMappingURL=NextVideos.css.map */

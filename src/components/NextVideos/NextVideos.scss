@@ -1,0 +1,29 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/typeography";
+@import "../../styles/partials/variables";
+
+.nextVideos {
+    font-family: "Avenir Demi";
+    font-size: 1.1rem;
+    line-height: 1.125rem;
+    margin: 1.25rem 1rem;
+
+    &__title {
+        color: $silver;
+        margin-bottom: 2.5rem;
+        font-size: 1rem;
+
+        @include desktop {
+            font-size: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    @include desktop {
+        float: right;
+        width: 25%;
+        margin-left: 0;
+        margin-right: 5rem;
+    }
+}
+
