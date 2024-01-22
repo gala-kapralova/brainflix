@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.video {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .video {
+    width: 45%;
+  }
+}
+@media (min-width: 80rem) {
+  .video {
+    width: 100%;
+  }
+}
+.video__thumbnail {
+  width: 7.5rem;
+  height: 4.375rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.313rem;
+}
+@media (min-width: 48rem) {
+  .video__thumbnail {
+    height: 5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .video__thumbnail {
+    height: 4.375rem;
+    width: 7.5rem;
+  }
+}
+.video__details {
+  margin-left: 1rem;
+}
+.video__details-title {
+  margin-top: 0;
+  font-family: "Avenir Demi";
+  font-size: 0.9rem;
+}
+.video__details-channel {
+  font-family: "Avenir Regular";
+  color: #323232;
+  font-size: 0.9rem;
+}
+@media (min-width: 80rem) {
+  .video__details-channel {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+}/*# sourceMappingURL=Video.css.map */
