@@ -3,7 +3,22 @@
 }
 @media (min-width: 48rem) {
   .player {
+    position: relative;
     margin: 1rem 3rem;
+  }
+  .player:before, .player:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    background-color: #000000;
+  }
+  .player:before {
+    left: 0;
+  }
+  .player:after {
+    right: 0;
   }
 }
 @media (min-width: 80rem) {
@@ -14,11 +29,24 @@
 .player__video {
   width: 100%;
 }
+@media (min-width: 48rem) {
+  .player__video {
+    position: relative;
+    z-index: 1;
+  }
+}
 .player__controls {
   display: flex;
   width: 90%;
   margin: 0 auto;
   margin-top: -2.2rem;
+}
+@media (min-width: 48rem) {
+  .player__controls {
+    margin-top: -3.4rem;
+    position: relative;
+    z-index: 2;
+  }
 }
 .player__play {
   position: relative;

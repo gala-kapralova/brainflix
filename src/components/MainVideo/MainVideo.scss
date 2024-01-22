@@ -4,7 +4,22 @@
 .player {
     margin: 1rem;
     @include tablet {
+        position: relative;
         margin: 1rem 3rem;
+        &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2rem;
+        background-color: $brainflix-darkblack;
+    }
+        &:before {
+        left: 0;
+    }
+    &:after {
+        right: 0;
+    }
     }
     @include desktop {
         margin: 1rem 12rem;
@@ -12,6 +27,10 @@
 
     &__video {
         width: 100%;
+        @include tablet {
+            position: relative;
+            z-index: 1;
+    }
     }
 
     &__controls {
@@ -19,6 +38,11 @@
         width: 90%;
         margin: 0 auto;
         margin-top: -2.2rem;
+        @include tablet {
+            margin-top: -3.4rem;
+            position: relative;
+            z-index: 2;
+        }
     }
 
     &__play {
@@ -108,6 +132,10 @@
             height: 2.6rem;
             padding: 0 0.6rem;
         }
+        // @include desktop {
+        //     width: 7%;
+        //     margin-right: 10px;
+        // }
     }
 
     &__fullscreen {
