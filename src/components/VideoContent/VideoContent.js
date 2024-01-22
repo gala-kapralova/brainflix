@@ -49,10 +49,10 @@ const VideoContent = (props) => (
                         </div>
                         <div className="video-content__comment-input">
                             <div className="video-content__comment-input-container">
-                            <div className="video-content__comment-input-title">
-                                <label htmlFor="comment" className="video-content__comment-input-heading">JOIN THE CONVERSATION</label>
-                            </div>
-                            <textarea name="comment" cols="30" rows="5" placeholder="Add a new comment"></textarea>
+                                <div className="video-content__comment-input-title">
+                                    <label htmlFor="comment" className="video-content__comment-input-heading">JOIN THE CONVERSATION</label>
+                                </div>
+                                <textarea name="comment" cols="30" rows="5" placeholder="Add a new comment"></textarea>
                             </div>
                             <div className="video-content__comment-submit">
                                 <button type="submit" className="video-content__comment-submit-button">COMMENT</button>

@@ -19,12 +19,45 @@
 .video-content {
   margin: 1.25rem 1rem;
 }
+@media (min-width: 48rem) {
+  .video-content {
+    margin: 1rem 3rem;
+  }
+}
+@media (min-width: 80rem) {
+  .video-content {
+    margin-right: 0;
+    width: 58%;
+    float: left;
+    margin-left: 6rem;
+    position: relative;
+  }
+}
+@media (min-width: 80rem) {
+  .video-content:after {
+    content: "";
+    position: absolute;
+    right: 0rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #E1E1E1;
+  }
+}
 .video-content__heading {
   font-family: "Avenir Demi";
   font-size: 1.2rem;
   line-height: 2.5rem;
   margin-bottom: 0;
   color: #323232;
+}
+@media (min-width: 48rem) {
+  .video-content__heading {
+    font-family: "Avenir Bold";
+    font-size: 1.7rem;
+    line-height: 2.9rem;
+    clear: both;
+  }
 }
 .video-content__title {
   margin-bottom: 0;
@@ -43,11 +76,21 @@
   margin-bottom: 5px;
   flex-basis: 50%;
 }
+@media (min-width: 48rem) {
+  .video-content__channel {
+    flex-direction: row;
+  }
+}
 .video-content__channel-author {
   font-family: "Avenir Demi";
   font-size: 1.1rem;
   line-height: 18px;
   margin: 0.8rem 0;
+}
+@media (min-width: 48rem) {
+  .video-content__channel-author {
+    padding-right: 2rem;
+  }
 }
 .video-content__channel-date {
   font-family: "Avenir Regular";
@@ -63,6 +106,16 @@
   flex-direction: column;
   align-content: flex-end;
 }
+@media (min-width: 48rem) {
+  .video-content__icons {
+    flex-direction: row;
+  }
+}
+@media (min-width: 80rem) {
+  .video-content__icons {
+    margin-right: 1rem;
+  }
+}
 .video-content__icons img {
   width: 1.7rem;
   height: 1.7rem;
@@ -75,8 +128,22 @@
   font-size: 1rem;
   color: #AFAFAF;
 }
-.video-content__divider {
-  border: 0.5px solid #E1E1E1;
+.video-content__divider-title {
+  border: 0.031rem solid #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .video-content__divider-title {
+    visibility: hidden;
+    margin: 0.5rem;
+  }
+}
+.video-content__divider-description {
+  border: 0.031rem solid #E1E1E1;
+}
+@media (min-width: 48rem) {
+  .video-content__divider-description {
+    margin-top: 0;
+  }
 }
 .video-content__description {
   font-family: "Avenir Regular";
@@ -84,14 +151,46 @@
   color: #323232;
   line-height: 1.3rem;
 }
+@media (min-width: 48rem) {
+  .video-content__description {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    margin: 2rem 0 3rem 0;
+  }
+}
+@media (min-width: 80rem) {
+  .video-content__description {
+    margin-right: 1rem;
+  }
+}
 .video-content__comment-count {
   font-family: "Avenir Demi";
   font-size: 1rem;
-  margin-top: 1rem;
+}
+@media (min-width: 48rem) {
+  .video-content__comment-count {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 80rem) {
+  .video-content__comment-count {
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 48rem) {
+  .video-content__comment-input-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
 }
 .video-content__comment-add {
-  display: flex;
   margin-bottom: 0;
+}
+@media (min-width: 80rem) {
+  .video-content__comment-add {
+    margin-right: 1rem;
+  }
 }
 .video-content__comment-container {
   display: flex;
@@ -119,11 +218,22 @@
   .video-content__comment-avatar img {
     width: 3.35rem;
     height: 3.35rem;
+    margin-top: 1.9rem;
   }
 }
 .video-content__comment-input {
   margin: 0;
   width: 100%;
+  align-items: center;
+}
+@media (min-width: 48rem) {
+  .video-content__comment-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+  }
 }
 .video-content__comment-submit-button {
   font-family: "Avenir Demi";
@@ -135,11 +245,18 @@
   height: 3rem;
   cursor: pointer;
   font-size: 1rem;
-  width: 14rem;
+  width: 100%;
   margin: 0;
 }
 .video-content__comment-submit-button:hover {
   background-color: #0065AD;
+}
+@media (min-width: 48rem) {
+  .video-content__comment-submit-button {
+    margin-top: 1.4rem;
+    padding-top: 0.4rem;
+    width: 13rem;
+  }
 }
 .video-content__comment textarea {
   font-family: "Avenir Regular";
@@ -153,6 +270,20 @@
   box-sizing: border-box;
   color: #323232;
 }
+.video-content__comment textarea::-moz-placeholder {
+  color: #323232;
+}
+.video-content__comment textarea::placeholder {
+  color: #323232;
+}
+@media (min-width: 48rem) {
+  .video-content__comment textarea {
+    height: 3rem;
+    font-size: 1rem;
+    padding-top: 0.7rem;
+    flex-grow: 1;
+  }
+}
 .video-content__comment-container {
   width: 100%;
 }
@@ -164,14 +295,18 @@
 }
 .video-content__comments-card {
   display: flex;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 2px solid #E1E1E1;
 }
 .video-content__comments-card:first-of-type {
-  border-top: 1px solid #E1E1E1;
+  border-top: 2px solid #E1E1E1;
+}
+.video-content__comments-card:last-child {
+  border-bottom: none;
 }
 .video-content__comments-avatar {
   margin-top: 0.75rem;
   margin-right: 1.25rem;
+  flex-shrink: 0;
 }
 .video-content__comments-avatar img {
   border-radius: 50%;
@@ -184,11 +319,14 @@
   -o-object-position: center left;
      object-position: center left;
   background-color: #E1E1E1;
+  flex-shrink: 0;
 }
 @media (min-width: 48rem) {
   .video-content__comments-avatar img {
     width: 3.35rem;
+    max-width: 3.35rem;
     height: 3.35rem;
+    max-height: 3.35rem;
   }
 }
 .video-content__comments-container p {
@@ -196,7 +334,6 @@
 }
 .video-content__comments-heading {
   font-family: "Avenir Regular";
-  font-size: 1rem;
   color: #323232;
   display: flex;
   justify-content: space-between;
@@ -205,9 +342,24 @@
   font-family: "Avenir Demi";
   font-size: 0.9rem;
 }
+@media (min-width: 48rem) {
+  .video-content__comments-heading-name {
+    font-size: 1.1rem;
+  }
+}
 .video-content__comments-heading-timestamp {
   color: #AFAFAF;
   font-size: 0.9rem;
+}
+@media (min-width: 48rem) {
+  .video-content__comments-heading-timestamp {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .video-content__comments-heading-timestamp {
+    margin-right: 1rem;
+  }
 }
 .video-content__comments-text {
   font-family: "Avenir Regular";
@@ -215,4 +367,10 @@
   color: #323232;
   font-size: 0.9rem;
   margin-top: 0;
+}
+@media (min-width: 48rem) {
+  .video-content__comments-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }/*# sourceMappingURL=VideoContent.css.map */
