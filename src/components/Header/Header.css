@@ -38,7 +38,7 @@
   font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 
-.header {
+.header__nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -47,7 +47,7 @@
   height: 10.5rem;
 }
 @media (min-width: 48rem) {
-  .header {
+  .header__nav {
     flex-wrap: nowrap;
     align-items: center;
     margin: 0 1.25rem;
@@ -56,7 +56,7 @@
   }
 }
 @media (min-width: 80rem) {
-  .header {
+  .header__nav {
     margin: 0 8rem;
   }
 }

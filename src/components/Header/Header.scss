@@ -5,6 +5,7 @@
 
 
 .header {
+    &__nav { 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -20,6 +21,7 @@
     }
     @include desktop {
         margin: 0 8rem;
+    }
     }
     &__logo {
         text-align: center;
@@ -109,5 +111,4 @@
 
         }
     }
-
 }
