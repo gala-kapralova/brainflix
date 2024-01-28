@@ -1,5 +1,6 @@
     import logo from "../../assets/logo/BrainFlix-logo.svg";
     import avatar from "../../assets/images/Mohan-muruge.jpg";
+    import { Link } from "react-router-dom"
     import "./Header.scss";
 
     const Header = () => (
@@ -15,7 +16,7 @@
 
     const Logo = () => (
     <div className="header__logo">
-        <a href="../../App" className="home__link"><img src={logo} alt="Logo" className="header__logo-icon"/></a>
+        <Link to="/"><img src={logo} alt="Logo" className="header__logo-icon"/></Link>
     </div>
     );
 
@@ -30,7 +31,7 @@
     )
 
     const UploadButton = () => (
-    <button className="header__button">UPLOAD</button>
+    <Link to="/video-upload" className="header__link"><button className="header__button">UPLOAD</button></Link>
     )
 
     export default Header;

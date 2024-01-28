@@ -1,30 +1,20 @@
-import Header from "./components/Header/Header";
-import MainVideo from "./components/MainVideo/MainVideo";
-import videos from "./data/videos.json";
-import VideoContent from "./components/VideoContent/VideoContent";
-import videoDetails from "./data/video-details.json";
-import NextVideos from "./components/NextVideos/NextVideos";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import VideoPage from './pages/VideoPage/VideoPage';
+import UploadPage from './pages/UploadPage/UploadPage';
+
 
 function App() {
-  const videoData = videos[0];
-  const videoContent = videoDetails[0];
-  return (
+return (
+  <BrowserRouter>
     <div className="App">
-      <Header />
-      <MainVideo image={videoData.image}/>
-      <VideoContent 
-      title={videoContent.title}
-      channel={videoContent.channel}
-      image={videoContent.image}
-      description={videoContent.description}
-      views={videoContent.views}
-      likes={videoContent.likes}
-      timestamp={videoContent.timestamp}
-      comments={videoContent.comments}
-      avatar={videoContent.avatar}/>
-      <NextVideos currentVideoId={videoData.id} />
-    </div>
-  );
-}
+      <Routes>
+            <Route path="/" element={<VideoPage />} />
+            <Route path="/video-upload" element={<UploadPage />} />
+            <Route path="/video-player/:videoId" element={<VideoPage />} />
+      </Routes>
+    </div>  
+  </BrowserRouter>
+   );
+ }
 
 export default App;
