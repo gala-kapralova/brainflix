@@ -303,10 +303,12 @@
   color: #323232;
 }
 .video-content__comment textarea::-moz-placeholder {
-  color: #323232;
+  color: #0065AD;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 .video-content__comment textarea::placeholder {
-  color: #323232;
+  color: #0065AD;
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 @media (min-width: 48rem) {
   .video-content__comment textarea {

@@ -262,7 +262,8 @@
             box-sizing: border-box;
             color: $brainflix-black;
             &::placeholder {
-                color: $brainflix-black;
+                color: $brainflix-darkblue;
+                font-family: "Avenir", Arial, Helvetica, sans-serif; 
             }
             @include tablet {
                 height: 3rem;
