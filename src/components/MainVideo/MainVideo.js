@@ -5,7 +5,7 @@ import volumeUpButton from "../../assets/icons/volume_up.svg";
 import volumeOffButton from "../../assets/icons/volume_off.svg";
 import "./MainVideo.scss";
 import React, { useState } from 'react';
-import videosData from "../../data/videos.json"
+
 
 const MainVideo = (props) => {
     // Play buton state
