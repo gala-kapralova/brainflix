@@ -1,6 +1,7 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/typeography";
 @import "../../styles/partials/variables";
+@import "../../styles/partials/global";
 
 .video {
     display: flex;
@@ -36,7 +37,8 @@
 
         &-title {
             margin: 0;
-            font-family: "Avenir Demi";
+            font-weight: 500;
+            font-style: normal;
             font-size: 0.9rem;
             @include tablet {
                 font-size: 1rem;
@@ -45,7 +47,8 @@
         }
 
         &-channel {
-            font-family: "Avenir Regular";
+            font-weight: 400;
+            font-style: normal;
             color: $brainflix-black;
             font-size: 0.9rem;
             margin-top: 5%;

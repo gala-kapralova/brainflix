@@ -1,6 +1,8 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/typeography";
 @import "../../styles/partials/variables";
+@import "../../styles/partials/global";
+
 
 .header {
     display: flex;
@@ -40,7 +42,8 @@
     }
 
     &__search {
-        font-family: "Avenir Demi";
+        font-weight: 500;
+        font-style: normal;
         width: 95%;
         height: 3.125rem;
         background: url(../../assets/icons/search.svg) no-repeat 0.44rem 0.938rem;
@@ -81,7 +84,8 @@
     }
 
     &__button {
-        font-family: "Avenir Demi";
+        font-weight: 500;
+        font-style: normal;
         background: url(../../assets/icons/upload.svg) no-repeat 0.5rem 0.7rem;
         background-color: $brainflix-blue;
         border: none;

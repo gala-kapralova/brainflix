@@ -1,21 +1,43 @@
 @font-face {
-  font-family: "Avenir Regular";
+  font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Demi";
+  font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Bold";
+  font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.App {
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+}
+
 .video {
   display: flex;
   margin-bottom: 1.5rem;
@@ -54,7 +76,8 @@
 }
 .video__details-title {
   margin: 0;
-  font-family: "Avenir Demi";
+  font-weight: 500;
+  font-style: normal;
   font-size: 0.9rem;
 }
 @media (min-width: 48rem) {
@@ -64,7 +87,8 @@
   }
 }
 .video__details-channel {
-  font-family: "Avenir Regular";
+  font-weight: 400;
+  font-style: normal;
   color: #323232;
   font-size: 0.9rem;
   margin-top: 5%;

@@ -1,21 +1,43 @@
 @font-face {
-  font-family: "Avenir Regular";
+  font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Demi";
+  font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "Avenir Bold";
+  font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.App {
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+}
+
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -61,7 +83,8 @@
   flex-grow: 1;
 }
 .header__search {
-  font-family: "Avenir Demi";
+  font-weight: 500;
+  font-style: normal;
   width: 95%;
   height: 3.125rem;
   background: url(../../assets/icons/search.svg) no-repeat 0.44rem 0.938rem;
@@ -109,7 +132,8 @@
   }
 }
 .header__button {
-  font-family: "Avenir Demi";
+  font-weight: 500;
+  font-style: normal;
   background: url(../../assets/icons/upload.svg) no-repeat 0.5rem 0.7rem;
   background-color: #0095FF;
   border: none;

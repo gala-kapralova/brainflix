@@ -1,9 +1,11 @@
 @import "../../styles/partials/mixins";
 @import "../../styles/partials/typeography";
 @import "../../styles/partials/variables";
+@import "../../styles/partials/global";
 
 .nextVideos {
-    font-family: "Avenir Demi";
+    font-weight: 500;
+    font-style: normal;
     font-size: 1.1rem;
     line-height: 1.125rem;
     margin: 1.25rem 1rem;
