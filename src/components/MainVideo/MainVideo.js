@@ -20,7 +20,9 @@ const MainVideo = (props) => {
     };
     return (
     <section className="player">
+        <div className="player__video-container">
         <video poster={props.image} className="player__video"></video>
+        </div>
         <div className="player__controls">
             <button className="player__play" type="button" onClick={togglePlay}>
                     <img className="player__play-icon" src={isPlaying ? pauseButton : playButton} alt={isPlaying ? "Pause Button" : "Play Button"} />
