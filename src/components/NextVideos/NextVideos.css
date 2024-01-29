@@ -38,6 +38,12 @@
   font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .nextVideos {
   font-weight: 500;
   font-style: normal;
@@ -45,15 +51,9 @@
   line-height: 1.125rem;
   margin: 1.25rem 1rem;
 }
-.nextVideos__title {
-  color: #AFAFAF;
-  margin-bottom: 2.5rem;
-  font-size: 1rem;
-}
-@media (min-width: 80rem) {
-  .nextVideos__title {
-    font-size: 0.75rem;
-    margin-bottom: 1.25rem;
+@media (min-width: 48rem) {
+  .nextVideos {
+    margin-left: 3rem;
   }
 }
 @media (min-width: 80rem) {
@@ -62,5 +62,22 @@
     width: 25%;
     margin-left: 0;
     margin-right: 5rem;
+  }
+}
+.nextVideos__title {
+  color: #AFAFAF;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+@media (min-width: 48rem) {
+  .nextVideos__title {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 80rem) {
+  .nextVideos__title {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
   }
 }/*# sourceMappingURL=NextVideos.css.map */

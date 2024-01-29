@@ -3,29 +3,41 @@
 @import "../../styles/partials/variables";
 @import "../../styles/partials/global";
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 .nextVideos {
     font-weight: 500;
     font-style: normal;
     font-size: 1.1rem;
     line-height: 1.125rem;
     margin: 1.25rem 1rem;
-
-    &__title {
-        color: $silver;
-        margin-bottom: 2.5rem;
-        font-size: 1rem;
-
-        @include desktop {
-            font-size: 0.75rem;
-            margin-bottom: 1.25rem;
-        }
+    @include tablet {
+        margin-left: 3rem;
     }
-
+    
     @include desktop {
         float: right;
         width: 25%;
         margin-left: 0;
         margin-right: 5rem;
     }
-}
 
+    &__title {
+        color: $silver;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        @include tablet {
+            font-size: 1rem;
+        }
+        @include desktop {
+            font-size: 0.8rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+}
