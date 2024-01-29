@@ -79,6 +79,8 @@
   font-weight: 500;
   font-style: normal;
   font-size: 0.9rem;
+  text-decoration: none;
+  color: #323232;
 }
 @media (min-width: 48rem) {
   .video__details-title {
