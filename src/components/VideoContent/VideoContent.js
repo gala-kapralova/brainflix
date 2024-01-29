@@ -3,44 +3,40 @@ import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 
-const VideoContent = (props) => (
+const VideoContent = ({ title, channel, image, description, views, likes, timestamp, comments }) => (
     <section className="video-content">
         <div className="video-content__heading">
-            <h1 className="video-content__title">{props.title}</h1>
-            <hr className="video-content__divider-title"></hr>  
-            <div className="video-content__channel-icons-container">         
-            <div className="video-content__channel">
-                <h3 className="video-content__channel-author">By {props.channel}</h3> 
-                <span className="video-content__channel-date">
-                    {new Date(props.timestamp).toLocaleDateString('en-US', {
-                        month: '2-digit',
-                        day: '2-digit',
-                        year: 'numeric' 
-                    })}
-                </span>
-            </div>
-            <div className="video-content__icons">
-                <div className="video-content__views-icons">
-                <img src={viewsIcon} alt="Views Icon" /> <span>{props.views}</span>
+            <h1 className="video-content__title">{title}</h1>
+            <hr className="video-content__divider-title" />
+            <div className="video-content__channel-icons-container">
+                <div className="video-content__channel">
+                    <h3 className="video-content__channel-author">By {channel}</h3>
+                    <span className="video-content__channel-date">
+                        {new Date(timestamp).toLocaleDateString('en-US', {
+                            month: '2-digit',
+                            day: '2-digit',
+                            year: 'numeric'
+                        })}
+                    </span>
                 </div>
-                <div className="video-content__likes-icons">
-                <img src={likesIcon} alt="Likes Icon" /> <span>{props.likes}</span>
+                <div className="video-content__icons">
+                    <div className="video-content__views-icons">
+                        <img src={viewsIcon} alt="Views Icon" /> <span>{views}</span>
+                    </div>
+                    <div className="video-content__likes-icons">
+                        <img src={likesIcon} alt="Likes Icon" /> <span>{likes}</span>
+                    </div>
                 </div>
             </div>
-            </div> 
         </div>
-
-        <hr className="video-content__divider-description"></hr>
-
+        <hr className="video-content__divider-description" />
         <div className="video-content__description">
-            <p>{props.description}</p>
+            <p>{description}</p>
         </div>
-
         <div className="video-content__comment">
             <h2 className="video-content__comment-count">
-                 {props.comments ? `${props.comments.length} Comments` : 'No Comments'}
+                 {comments ? `${comments.length} Comments` : 'No Comments'}
             </h2>
-
             <div className="video-content__comment-add">
                 <form action="" method="" className="video-content__comment-form">
                     <div className="video-content__comment-container">
@@ -61,13 +57,16 @@ const VideoContent = (props) => (
                     </div>
                 </form>
             </div>
-            </div>
-
-            <div className="video-content__comments">
-            {props.comments && props.comments.map((comment, index) => (
+        </div>
+        <div className="video-content__comments">
+            {comments && comments.map((comment, index) => (
                 <div className="video-content__comments-card" key={index}>
                     <div className="video-content__comments-avatar">
-                        <img src={comment.avatar || props.avatar} alt="Avatar image" />
+                        {comment.avatar ? 
+                            <img src={comment.avatar} alt="Commenter's Avatar" className="video-content__comments-avatar-image" />
+                            : 
+                            <div className="default-avatar"></div>
+                        }
                     </div>
                     <div className="video-content__comments-container">
                         <div className="video-content__comments-heading">
@@ -76,7 +75,7 @@ const VideoContent = (props) => (
                                 {new Date(comment.timestamp).toLocaleDateString('en-US', {
                                     month: '2-digit',
                                     day: '2-digit',
-                                    year: 'numeric' 
+                                    year: 'numeric'
                                 })}
                             </p>
                         </div>

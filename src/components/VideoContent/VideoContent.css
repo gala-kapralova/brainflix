@@ -48,10 +48,9 @@
 }
 @media (min-width: 80rem) {
   .video-content {
-    margin-right: 0;
-    width: 58%;
+    margin: 0 0 0 6rem;
+    width: 60%;
     float: left;
-    margin-left: 6rem;
     position: relative;
   }
 }
@@ -204,6 +203,8 @@
 @media (min-width: 80rem) {
   .video-content__comment-count {
     margin-right: 1rem;
+    font-size: 0.98rem;
+    margin-bottom: 1.3rem;
   }
 }
 @media (min-width: 48rem) {
@@ -303,11 +304,11 @@
   color: #323232;
 }
 .video-content__comment textarea::-moz-placeholder {
-  color: #0065AD;
+  color: #323232;
   font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 .video-content__comment textarea::placeholder {
-  color: #0065AD;
+  color: #323232;
   font-family: "Avenir", Arial, Helvetica, sans-serif;
 }
 @media (min-width: 48rem) {
@@ -322,10 +323,9 @@
   width: 100%;
 }
 .video-content__comments {
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 .video-content__comments-card {
   display: flex;
@@ -334,8 +334,11 @@
 .video-content__comments-card:first-of-type {
   border-top: 2px solid #E1E1E1;
 }
-.video-content__comments-card:last-child {
-  border-bottom: none;
+@media (min-width: 80rem) {
+  .video-content__comments-card:last-child {
+    border-bottom: none;
+    margin-bottom: 1.5rem;
+  }
 }
 .video-content__comments-avatar {
   margin-top: 0.75rem;
@@ -409,5 +412,13 @@
   .video-content__comments-text {
     font-size: 1rem;
     line-height: 1.5rem;
+    padding-right: 0.5rem;
   }
+}
+
+.default-avatar {
+  background-color: #AFAFAF;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
 }/*# sourceMappingURL=VideoContent.css.map */
