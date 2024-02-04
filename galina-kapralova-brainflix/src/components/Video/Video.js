@@ -18,12 +18,12 @@ export const Video = ({ id, channel, image }) => {
     useEffect(() => {
         fetchFullVideoDetails();
     },[id])
-    console.log(`${process.env.REACT_APP_API_BASE_PATH}/${image}`);
+    console.log(`${process.env.REACT_APP_API_BASE_URL}/${image}`);
 
     return (
         <section className="video">
             <div>
-            <Link to={`/videos/${id}`} ><img src={`${process.env.REACT_APP_API_BASE_PATH}/${image}`} alt="Video Thumbnail" className="video__thumbnail" /></Link>
+            <Link to={`/videos/${id}`} ><img src={`${process.env.REACT_APP_API_BASE_URL}/${image}`} alt="Video Thumbnail" className="video__thumbnail" /></Link>
             </div>
             <div className="video__details">
                 <Link to={`/videos/${id}`} className="video__details-title">{videoDetails.title}</Link>

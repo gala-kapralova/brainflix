@@ -19,14 +19,26 @@ router.route("/")
       }});
     res.status(200).json(noIds);
   })
+
   .post((req, res) => {
     const { title, description } = req.body;
-    if(!title || !description) return res.status(400).json("All requests must have a title and a description.")
-    const newVideo = {title, description};
-    newVideo.id = fetchVideos().length + 1;
-    const justAdded = addVideo(newVideo);
-    res.status(201).json(justAdded);
-  })
+    if (!title || !description) {
+      return res.status(400).json({ message: "All requests must have a title and a description." });
+    }
+    const defaultImagePath = "default-image.jpg"; 
+    const newVideo = {
+      title,
+      description,
+      image: defaultImagePath, 
+      views: "0",
+      likes: "0",
+      timestamp: Date.now(), 
+      comments: [] 
+    };
+  
+    const addedVideo = addVideo(newVideo);
+    res.status(201).json(addedVideo);
+  });
 
 router.route("/:id")
   .get((req, res) => {

@@ -19,7 +19,7 @@ const MainVideo = ({ image }) => {
         setIsUp(!isUp);
     };
 
-    const posterUrl = `${process.env.REACT_APP_API_BASE_PATH}/${image}`;
+    const posterUrl = `${process.env.REACT_APP_API_BASE_URL}/${image}`;
 
     return (
     <section className="player">
