@@ -18,6 +18,7 @@ const UploadVideo = () => {
         const videoData = {
             title: videoTitle,
             description: videoDescription,
+            image: defaultImageUrl,
         };
 
         try {
