@@ -286,8 +286,7 @@
 
         &-card {
             display: flex;
-            border-bottom: 2px solid $mercury;
-    
+            border-bottom: 2px solid $mercury;    
             &:first-of-type {
                 border-top: 2px solid $mercury;
             }
@@ -327,7 +326,10 @@
         &-container {
             p {
                 display: inline-block;
-            }    
+            }
+            @include tablet {
+                width:100%;
+                }    
         }
 
         &-heading {

@@ -7,7 +7,7 @@ import "./MainVideo.scss";
 import React, { useState } from 'react';
 
 
-const MainVideo = (props) => {
+const MainVideo = ({ image }) => {
     // Play buton state
     const [isPlaying, setIsPlaying] = useState(false);
     const togglePlay = () => {
@@ -18,10 +18,13 @@ const MainVideo = (props) => {
     const toggleVolume = () => {
         setIsUp(!isUp);
     };
+
+    const posterUrl = `${process.env.REACT_APP_API_BASE_PATH}/${image}`;
+
     return (
     <section className="player">
         <div className="player__video-container">
-        <video poster={props.image} className="player__video"></video>
+        <video poster={posterUrl} className="player__video"></video>
         </div>
         <div className="player__controls">
             <button className="player__play" type="button" onClick={togglePlay}>

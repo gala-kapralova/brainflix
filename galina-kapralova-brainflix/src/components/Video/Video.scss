@@ -34,6 +34,9 @@
     &__details {
         margin-left: 1rem;
         max-height: 4.375rem;
+        @include desktop {
+            width: 55%;
+        }
 
         &-title {
             margin: 0;
@@ -44,7 +47,10 @@
             color: $brainflix-black;
             @include tablet {
                 font-size: 1rem;
-                line-height: 1.3rem;;
+                line-height: 1.3rem;
+            }
+            @include desktop {
+                font-size: 0.95rem;
             }
         }
 
@@ -63,8 +69,8 @@
             }
 
             @include desktop {
-                font-size: 0.8rem;
-                margin: 0;
+                font-size: 0.85rem;
+                margin: 4% 0 0 0;
             }
         }
     }

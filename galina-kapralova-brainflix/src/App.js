@@ -10,7 +10,7 @@ return (
       <Routes>
             <Route path="/" element={<VideoPage />} />
             <Route path="/video-upload" element={<UploadPage />} />
-            <Route path="/video-player/:videoId" element={<VideoPage />} />
+            <Route path="/videos/:videoId" element={<VideoPage />} />
       </Routes>
     </div>  
   </BrowserRouter>
