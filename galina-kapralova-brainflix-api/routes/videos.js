@@ -21,15 +21,14 @@ router.route("/")
   })
 
   .post((req, res) => {
-    const { title, description } = req.body;
+    const { title, description, image } = req.body;
     if (!title || !description) {
       return res.status(400).json({ message: "All requests must have a title and a description." });
     }
-    const defaultImagePath = "default-image.jpg"; 
     const newVideo = {
       title,
       description,
-      image: defaultImagePath, 
+      image, 
       views: "0",
       likes: "0",
       timestamp: Date.now(), 
