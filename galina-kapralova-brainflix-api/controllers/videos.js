@@ -17,6 +17,7 @@ const addVideo = (newVideo) => {
     image: newVideo.image || defaultImagePath, 
     views: newVideo.views || "0", 
     likes: newVideo.likes || "0", 
+    channel: newVideo.channel || "Your channel name(placeholder)",
     timestamp: newVideo.timestamp || Date.now(), 
     comments: newVideo.comments || [] 
   };
