@@ -10,7 +10,7 @@ const videosRoutes = require("./routes/videos");
 const { PORT } = process.env;
 
 app.use(cors({
-  origin: 'http://localhost:3000' // Allow requests from your React app
+  origin: 'https://brainflix-videosite.netlify.app/' // Allow requests from your React app
 }));
 app.use(express.json());
 app.use(express.static('public/images'))
