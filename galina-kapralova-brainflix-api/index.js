@@ -9,9 +9,23 @@ const videosRoutes = require("./routes/videos");
 
 const { PORT } = process.env;
 
-app.use(cors({
-  origin: 'https://brainflix-videosite.netlify.app/' // Allow requests from your React app
-}));
+const corsOptions = {
+  origin: (origin, callback) => {
+      const allowedOrigins = [
+          'https://brainflix-videosite.netlify.app',
+          'http://localhost:3000' // Include localhost for development
+      ];
+
+      if (!origin || allowedOrigins.includes(origin)) {
+          callback(null, true); // Allow the request
+      } else {
+          callback(new Error('Not allowed by CORS'));
+      }
+  },
+  credentials: true // If using cookies/authentication
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static('public/images'))
 
